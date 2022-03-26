@@ -6,6 +6,7 @@ import FeedBackList from './Components/FeedBackList';
 import FeedBackData from './data/FeedBackData';
 import Card from './Components/shared/Card';
 import FeedBackStats from './Components/shared/FeedBackStats';
+import FeedbackForm from './Components/FeedbackForm';
 function App() {
 const [feedback, setFeedback] = useState(FeedBackData)
 
@@ -17,6 +18,7 @@ const deleteFeedback = (id) =>{
     <>
     <Header Heading = 'FeedBack UI From ProPs'/>
     <div className='container'>
+      <FeedbackForm />
       <FeedBackStats feedback={feedback}/>
      <FeedBackList feedback = {feedback}
      handleDelete={deleteFeedback} />
